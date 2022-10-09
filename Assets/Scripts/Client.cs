@@ -21,6 +21,8 @@ public class Client : MonoBehaviour
 
     public TMP_Dropdown buildingDropdown;
     public TMP_Dropdown factoryTypeDropdown;
+
+    public GameObject FacBuilding;
     public GameObject FacA;
     public GameObject FacB;
     public GameObject FacC;
@@ -118,14 +120,14 @@ public class Client : MonoBehaviour
 
         if (containerShip != null)
         {
-            containerShipTransform = Instantiate(containerShip.transform, new Vector3(70, factoryTransformPosition.y - 2f, factoryTransformPosition.z), Quaternion.identity);
+            containerShipTransform = Instantiate(containerShip.transform, new Vector3(7, factoryTransformPosition.y - 2f, factoryTransformPosition.z), Quaternion.identity);
         }
         else
         {
             throw new System.ArgumentException(ContainerShipPrefabName + "could not be found inside or loaded from Resources folder");
         }
 
-        containerShipTransform.Rotate(0f, 90f, 0f, Space.Self);
+        //containerShipTransform.Rotate(0f, 90f, 0f, Space.Self);
 
         return containerShipTransform;
     }
@@ -135,7 +137,7 @@ public class Client : MonoBehaviour
         var factory = Resources.Load(FactoryBuildingPrefabName) as GameObject;
         if (factory == null) throw new System.ArgumentException(FactoryBuildingPrefabName + "could not be found inside or loaded from Resources folder");
         Transform newFactory = Instantiate(factory.transform, new Vector2(Fac.transform.position.x,Fac.transform.position.y), Quaternion.identity);
-        newFactory.transform.Rotate(0f, 90f, 0f, Space.Self);
+        //newFactory.transform.Rotate(0f, 90f, 0f, Space.Self);
         return newFactory;
     }
 
