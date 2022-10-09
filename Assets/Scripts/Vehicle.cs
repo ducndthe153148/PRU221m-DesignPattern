@@ -41,7 +41,7 @@ public abstract class Vehicle : MonoBehaviour
                     // Park on ship
                     Vector3 loadPosition = containerShip.GetComponent<ContainerShip>().LoadVehicle(transform);
                     transform.position = loadPosition;
-                    transform.Rotate(0f,90f,0f,Space.Self);
+                    //transform.Rotate(0f,90f,0f,Space.Self);
                     _isOnContainerShip = true;
                 }
             }
