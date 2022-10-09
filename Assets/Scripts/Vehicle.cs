@@ -2,7 +2,7 @@
 
 public abstract class Vehicle : MonoBehaviour
 {
-    private const float ContainerShipPickupLocationOnXAxis = 33.5f;
+    private const float ContainerShipPickupLocationOnXAxis = 7f;
     
     // Each vehicle implementation specifies its own movement speed
     protected float MovementSpeed = 0f;

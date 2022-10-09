@@ -5,7 +5,7 @@ public class ContainerShip : MonoBehaviour
 {
     private const int MaxCapacity = 6;
     
-    const float VehicleDumpLocationOnXAxis = 60;
+    const float VehicleDumpLocationOnXAxis = 10;
     
     // References to all the vehicles already loaded onto the ship. We need the references as we want to destroy
     // the vehicles once the ship is out of the view :-)
